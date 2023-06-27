@@ -6,10 +6,21 @@ const App = () => {
   const [rows, setRows] = useState(Array(7).fill({ credits: '', grade: '' }));
 
   const handleCreditsChange = (id, value) => {
-    setRows((prevRows) =>
-      prevRows.map((row, index) => (index === id ? { ...row, credits: value } : row))
-    );
+    const credits = parseInt(value);
+  
+    if (credits < 0) {
+      setRows((prevRows) =>
+        prevRows.map((row, index) =>
+          index === id ? { ...row, credits: 0, negative: true } : row
+        )
+      );
+    } else {
+      setRows((prevRows) =>
+        prevRows.map((row, index) => (index === id ? { ...row, credits: value, negative: false } : row))
+      );
+    }
   };
+  
 
   const handleGradeChange = (id, value) => {
     setRows((prevRows) =>

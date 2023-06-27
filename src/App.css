@@ -18,6 +18,10 @@
   margin-bottom: 10px;
 }
 
+.row.negative {
+  background-color: #ff8b8b;
+}
+
 .row input {
   margin-right: 10px;
   width: 60px;
