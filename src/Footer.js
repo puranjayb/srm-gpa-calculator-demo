@@ -30,8 +30,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <img src={imagePuranjay} alt="Puranjay Image" />
-      <p>Credits &#169; Puranjay Bhargava 2023 </p>
-      <div> View Count: {visitCount}</div>
+      <p>Credits &#169; Puranjay Bhargava 2023  View Count: {visitCount} </p>
     </footer>
   );
 };
